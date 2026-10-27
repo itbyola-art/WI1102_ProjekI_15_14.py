@@ -1,0 +1,100 @@
+PSEUDOCODE: SMART DIET TRACKER
+
+nama_makanan = ["Nasi Putih", "Ayam Goreng", "Telur Rebus", "Sayur / Buah"]
+kalori_makanan = [200, 260, 75, 50]
+nama_olahraga = ["Jogging", "Bersepeda"]
+bakar_per_30_menit = [300, 200]
+riwayat_makanan = []
+riwayat_olahraga = []
+riwayat_minuman = []
+
+print "=== SMART DIET TRACKER ==="
+input nama, target_kalori, target_air_minum
+
+total_kalori_masuk = 0
+kalori_terbakar = 0
+total_minuman_masuk = 0
+
+while True:
+    print menu (1. Makanan, 2. Olahraga, 3. Minuman, 4. Selesai)
+    input pilihan
+
+    if pilihan == 1:
+        for i in range(len(nama_makanan)):
+            print i + 1, nama_makanan[i], kalori_makanan[i]
+        input menu_makanan, porsi
+
+        if porsi <= 0:
+            print "Porsi harus lebih dari 0"
+            continue
+
+        if menu_makanan >= 1 and menu_makanan <= len(nama_makanan):
+            idx = menu_makanan - 1
+            kalori = porsi * kalori_makanan[idx]
+        else:
+            print "Pilihan tidak ada"
+            continue
+
+        total_kalori_masuk = total_kalori_masuk + kalori
+        riwayat_makanan.append(nama_makanan[idx], porsi, kalori)
+
+    else if pilihan == 2:
+        for i in range(len(nama_olahraga)):
+            print i + 1, nama_olahraga[i], bakar_per_30_menit[i]
+        input olahraga, durasi
+
+        if durasi <= 0:
+            print "Durasi harus lebih dari 0"
+            continue
+
+        if olahraga >= 1 and olahraga <= len(nama_olahraga):
+            idx = olahraga - 1
+            bakar = (durasi / 30) * bakar_per_30_menit[idx]
+        else:
+            print "Pilihan tidak ada"
+            continue
+
+        kalori_terbakar = kalori_terbakar + bakar
+        riwayat_olahraga.append(nama_olahraga[idx], durasi, bakar)
+
+    else if pilihan == 3:
+        input air_harian
+
+        if air_harian <= 0:
+            print "Jumlah air harus lebih dari 0"
+            continue
+
+        total_minuman_masuk = total_minuman_masuk + air_harian
+        riwayat_minuman.append(air_harian)
+
+    else if pilihan == 4:
+        break
+
+    else:
+        print "Pilihan salah"
+
+kalori_bersih = total_kalori_masuk - kalori_terbakar
+sisa = target_kalori - kalori_bersih
+sisa_air = target_air_minum - total_minuman_masuk
+
+print nama
+for i in range(len(riwayat_makanan)):
+    print i + 1, riwayat_makanan[i]
+for i in range(len(riwayat_olahraga)):
+    print i + 1, riwayat_olahraga[i]
+for i in range(len(riwayat_minuman)):
+    print i + 1, riwayat_minuman[i]
+
+print target_kalori, total_kalori_masuk, kalori_terbakar, kalori_bersih
+
+if sisa >= 0:
+    print "Sisa kuota", sisa, "(AMAN)"
+else:
+    print "Kelebihan", abs(sisa), "(OVER KALORI)"
+
+print target_air_minum, total_minuman_masuk
+
+if sisa_air <= 0:
+    print "Target air tercapai"
+else:
+    print "Kurang", sisa_air, "ml"

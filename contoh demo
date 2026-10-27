@@ -1,0 +1,149 @@
+CONTOH DEMO SMART DIET TRACKER
+Keluaran program asli dijalankan otomatis; masukan yang diketik ditampilkan oleh skrip pemutar.
+Tanggal: 27 Oktober 2026. Sesi dimulai dengan data kosong.
+Perintah: python3 smart_diet_tracker_tanpa_isdigit.py
+Hasil pemeriksaan otomatis: LULUS. Program selesai dengan exit code 0.
+SHA-256 sumber: 13bd4660d26b61ce83144a19a37c99d20fddca3c683a2643d93a0e18761bc85a
+ 
+--- MULAI REKAMAN TERMINAL ---
+=== PROGRAM SMART DIET TRACKER ===
+Masukkan nama Anda: yola
+Masukkan target kalori harian: 2000
+Masukkan target air minum harian (ml): 2000
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 1
+ 
+Pilih Makanan:
+1. Nasi Putih (200 kalori)
+2. Ayam Goreng (260 kalori)
+3. Telur Rebus (75 kalori)
+4. Sayur / Buah (50 kalori)
+Pilih nomor makanan (1-4): 2
+Masukkan jumlah porsi: 2
+-> Berhasil tambah Ayam Goreng
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 1
+ 
+Pilih Makanan:
+1. Nasi Putih (200 kalori)
+2. Ayam Goreng (260 kalori)
+3. Telur Rebus (75 kalori)
+4. Sayur / Buah (50 kalori)
+Pilih nomor makanan (1-4): 1
+Masukkan jumlah porsi: 0
+Porsi harus lebih dari 0!
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 1
+ 
+Pilih Makanan:
+1. Nasi Putih (200 kalori)
+2. Ayam Goreng (260 kalori)
+3. Telur Rebus (75 kalori)
+4. Sayur / Buah (50 kalori)
+Pilih nomor makanan (1-4): 9
+Masukkan jumlah porsi: 1
+Pilihan tidak ada!
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 1
+ 
+Pilih Makanan:
+1. Nasi Putih (200 kalori)
+2. Ayam Goreng (260 kalori)
+3. Telur Rebus (75 kalori)
+4. Sayur / Buah (50 kalori)
+Pilih nomor makanan (1-4): 1
+Masukkan jumlah porsi: 1
+-> Berhasil tambah Nasi Putih
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 2
+ 
+Pilih Olahraga:
+1. Jogging (bakar ~300 kalori per 30 menit)
+2. Bersepeda (bakar ~200 kalori per 30 menit)
+Pilih nomor olahraga (1-2): 1
+Masukkan durasi (menit): 60
+-> Berhasil catat Jogging
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 3
+Masukkan jumlah air yang dikonsumsi hari ini (ml): 500
+-> Berhasil menambah 500.0 ml air minum!
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 7
+Pilihan salah, silakan pilih 1, 2, 3, atau 4!
+ 
+--- MENU UTAMA ---
+1. Catat Makanan
+2. Catat Olahraga
+3. Catat konsumsi minuman harian
+4. Selesai & Lihat Hasil
+Pilih menu (1/2/3/4): 4
+ 
+=== REKAPITULASI AKHIR ===
+Nama Pengguna      : Budi
+ 
+--- Riwayat Makanan ---
+1. Ayam Goreng x2.0 = 520.0 kalori
+2. Nasi Putih x1.0 = 200.0 kalori
+ 
+--- Riwayat Olahraga ---
+1. Jogging 60.0 menit = 600.0 kalori terbakar
+ 
+--- Riwayat Minuman ---
+1. 500.0 ml
+ 
+--- Ringkasan ---
+Target Kalori      : 2000.0
+Total Kalori Masuk : 720.0
+Kalori Terbakar    : 600.0
+Kalori Bersih      : 120.0
+Status             : Sisa kuota 1880.0 kalori (AMAN)
+Target Air Minum   : 2000.0 ml
+Total Air Diminum  : 500.0 ml
+Status Air         : Kurang 1500.0 ml dari target
+--- AKHIR REKAMAN TERMINAL ---
+ 
+Yang diperiksa:
+- porsi 0 ditolak: ya
+- nomor makanan 9 ditolak: ya
+- menu 7 ditolak: ya
+- total kalori masuk 720 (2 ayam goreng + 1 nasi): ya
+- kalori terbakar 600 (jogging 60 menit): ya
+- kalori bersih 120: ya
+- status kalori AMAN: ya
+- air kurang 1500 ml dari target: ya
+- program keluar normal: ya
